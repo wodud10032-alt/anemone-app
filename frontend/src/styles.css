@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui;
+  background: #f5f6fa;
+  color: #111827;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  height: 64px;
+  padding: 0 24px;
+  background: #111827;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.app-header h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.app-nav {
+  display: flex;
+  gap: 16px;
+  flex: 1;
+}
+
+.app-nav a {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.app-nav a:hover {
+  opacity: 1;
+}
+
+.app-main {
+  flex: 1;
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.primary-btn,
+.ghost-btn,
+.link-btn {
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+}
+
+.primary-btn {
+  background: #2d70f5;
+  color: white;
+}
+
+.primary-btn.full-width {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.ghost-btn {
+  background: transparent;
+  border: 1px solid #4b5563;
+  color: white;
+}
+
+.link-btn {
+  background: none;
+  color: #2563eb;
+  padding: 0;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f172a;
+}
+
+.login-card {
+  background: white;
+  padding: 40px 48px;
+  border-radius: 24px;
+  width: 360px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.45);
+}
+
+.login-card h1 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+}
+
+input,
+textarea {
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.error {
+  color: #b91c1c;
+  font-size: 12px;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.list-header-left h2 {
+  margin: 0 0 8px 0;
+}
+
+.list-header-left form input {
+  min-width: 260px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px 16px;
+}
+
+.detail-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.consulting-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.consulting-table th,
+.consulting-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 13px;
+}
+
+.consulting-table tr:hover {
+  background: #f3f4ff;
+  cursor: pointer;
+}
+
+.empty-state {
+  padding: 64px 0;
+  text-align: center;
+  color: #6b7280;
+}
+
+.option-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.option-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 12px 16px;
+    gap: 8px;
+  }
+
+  .app-main {
+    padding: 16px;
+  }
+}
